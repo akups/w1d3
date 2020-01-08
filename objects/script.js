@@ -113,9 +113,12 @@ arr1.push({
 });
 
 // shallow copy
+// any object (or array) from arr1 will be copied by reference (and thus there could be elements in arr4 that have the same reference as elements in arr1)
 const arr4 = arr1.slice(0);
 
 arr4.push("!");
+
+arr1.push({});
 
 // mutate the nested object
 arr1[2].foo = "qux";

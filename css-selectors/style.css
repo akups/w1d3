@@ -1,0 +1,84 @@
+* {
+  /* selects all the elements */
+}
+
+/* type selector */
+body {
+  background-color: lightcyan;
+}
+
+/* class selector */
+.container {
+  text-align: center;
+}
+
+/* selects all p descendants of an element with class box */
+.box p {
+  color: teal;
+  border: 1px solid black;
+}
+
+/* selects all p that are direct children of an element with class box */
+.box > p {
+  color: goldenrod;
+}
+
+/* selects all p that are direct children of a div that is a direct children of an element with class box */
+.box > div > p {
+  background-color: hotpink;
+}
+
+.selected {
+  border: 5px dotted pink;
+}
+
+/* siblings */
+
+/* selects the subsequent li to any element with the selected class */
+.selected + li {
+  color: peachpuff;
+}
+
+/* selects the first ul child */
+ul :first-child,
+ol :last-child {
+  color: crimson;
+}
+
+/* selects all the 2nd children of an ol (index is 1-based) */
+ol :nth-child(2) {
+  border: 3px solid burlywood;
+}
+
+/* selects all the children of an ol with an odd index (index starts at 1) */
+ol :nth-child(odd) {
+  background-color: cornsilk;
+}
+
+/* combine selectors */
+div.box {
+  background-color: darkorange;
+  color: white;
+}
+
+/* attributes */
+
+/* selects a tags with the href attribute being equal to "#" */
+a[href="#"] {
+  background-color: turquoise;
+}
+
+/* selects a tags with the href attribute ending with ".html" */
+a[href$=".html"] {
+  background-color: chartreuse;
+}
+
+/* selects a tags where the href attribute starts with "log" */
+a[href^="log"] {
+  background-color: deepskyblue;
+}
+
+/* selects a tags where the href attribute contains "out" */
+a[href*="out"] {
+  color: white;
+}
