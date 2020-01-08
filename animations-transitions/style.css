@@ -1,0 +1,78 @@
+input:focus {
+  background-color: red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* transition-duration: 3s; */
+  /* transition-property: width, background-color; */
+  /* transition-delay: 2s; */
+  /* transition-timing-function: ease-in; */
+
+  /* transition-property width, transition-duration 1s transition-delay 200ms transition-timing-function ease-in-out */
+  /* height, 2s duration, 300ms delay */
+  /* transition: width 1s 200ms ease-in-out, height 2s 300ms; */
+
+  transition: height 2s linear;
+}
+
+/* .box:active { */
+.box:hover {
+  width: 200px;
+  height: 200px;
+  background-color: chartreuse;
+}
+
+.box:active {
+  background-color: crimson;
+  transition: 3s;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+
+  animation-name: myAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.ball:hover {
+  animation-play-state: paused;
+}
+
+@keyframes myAnimation {
+  0% {
+    /* t: 0s */
+  }
+
+  10% {
+    transform: scale(2);
+  }
+
+  20% {
+    /* t: 1s */
+    background-color: coral;
+  }
+
+  30% {
+    margin-top: 50vh;
+  }
+
+  100% {
+    /* t: 5s */
+    margin-left: 100%;
+    transform: translate(-100%);
+  }
+}
